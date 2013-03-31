@@ -9,9 +9,7 @@ class Application < Sinatra::Base
   not_found { send_file absolute('404.html'), status: 404 }
 
   get(/.+/) do
-    respond_with_static_file request.path do
-      404
-    end
+    respond_with_static_file request.path
   end
 
   private
@@ -26,12 +24,12 @@ class Application < Sinatra::Base
     end
   end
 
-  def respond_with_static_file(path, &missing_file_block)
+  def respond_with_static_file(path)
     if file_path = static_file_for(path)
       expires 500, :public, :must_revalidate
       send_file file_path
     else
-      missing_file_block.call
+      404
     end
   end
 
@@ -39,7 +37,7 @@ class Application < Sinatra::Base
     original_path = absolute path
     file_path_candidates = [original_path]
     unless original_path =~ /\.html$/
-      file_path_candidates << File.join(file_path, 'index.html')
+      file_path_candidates << File.join(original_path, 'index.html')
       file_path_candidates << "#{original_path}.html"
     end
     file_path_candidates.detect do |file_path|
