@@ -1,10 +1,4 @@
 .events {
-  @media screen and (max-width: 800px) {
-    ul,
-    .entry-content ul {
-      margin-left: 0;
-    }
-  }
   ul {
     list-style: none;
     li {
@@ -23,6 +17,7 @@
       }
       .date {
         @extend .title;
+
       }
       .location {
         &:before {
@@ -38,5 +33,18 @@
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  ul,
+  .entry-content ul {
+    margin-left: 0;
+  }
+
+}
+@media screen and (max-width: 600px) {
+  .post .meta .date {
+    padding-left: 20px;
   }
 }
