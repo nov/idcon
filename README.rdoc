@@ -4,7 +4,7 @@ An Octopress site running on Heroku.
 
 Since we aren't blogging, not using Octopress blogging feature for now.
 
-Actual site is running at http://idcon.org
+The actual site is running at http://idcon.org
 
 == Install
 
