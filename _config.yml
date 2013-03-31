@@ -3,9 +3,9 @@
 # ----------------------- #
 
 url: http://idcon.herokuapp.com
-title: "#idcon - Identity Conference"
-subtitle: ID厨と、人は呼ぶ。
-author: Nov Matake
+title: "#idcon"
+subtitle: Identity Conference
+author: idcon.org
 simple_search: http://google.com/search
 description:
 

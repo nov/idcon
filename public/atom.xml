@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[#idcon - Identity Conference]]></title>
+  <title><![CDATA[#idcon]]></title>
   <link href="http://idcon.herokuapp.com/atom.xml" rel="self"/>
   <link href="http://idcon.herokuapp.com/"/>
-  <updated>2013-03-31T14:37:47+09:00</updated>
+  <updated>2013-03-31T14:40:10+09:00</updated>
   <id>http://idcon.herokuapp.com/</id>
   <author>
-    <name><![CDATA[Nov Matake]]></name>
+    <name><![CDATA[idcon.org]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
