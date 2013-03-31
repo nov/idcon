@@ -46,6 +46,6 @@ class Application < Sinatra::Base
   end
 
   def absolute(path)
-    File.join File.dirname(__FILE__), '../public',  path
+    File.join File.dirname(__FILE__), 'public',  path
   end
 end
