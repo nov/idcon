@@ -21,7 +21,7 @@ class SinatraStaticServer < Sinatra::Base
     file_path_candidates << File.join(original_path, 'index.html')
     file_path_candidates << "#{original_path}.html"
     found_file_path = file_path_candidates.detect do |file_path|
-      File.exist?(file_path)
+      File.exist?(file_path) && !File.directory?(file_path)
     end || missing_file_block.call
     send_file(found_file_path)
   end
