@@ -5,10 +5,11 @@ require 'active_support/all'
 class Array
   def to_html
     <<-HTML
-      <h2>Recent Events</h2>
+      <h2>History</h2>
       <div class="entry-content">
         <ul>
           #{collect(&:to_html).join}
+          {% include events_static.html %}
         </ul>
       </div>
 

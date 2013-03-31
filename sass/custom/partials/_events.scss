@@ -14,7 +14,11 @@
       .date {
         @extend .title;
       }
-
+      .location {
+        &:before {
+          content: '@ ';
+        }
+      }
       &.future {
         .location {
           &:after {
