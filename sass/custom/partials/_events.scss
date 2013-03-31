@@ -5,6 +5,10 @@
       margin: 15px 0;
       h3 {
         margin-top: -10px;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       a {
         &:hover {
