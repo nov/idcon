@@ -7,7 +7,13 @@ $root = ::File.dirname(__FILE__)
 class SinatraStaticServer < Sinatra::Base
 
   before do
-    redirect request.url.sub(/www\./, ''), 301 if request.host =~ /^www/
+    alternate_domains = [
+      'www.idcon.org',
+      'idcon.herokuapp.com'
+    ]
+    if alternate_domains.include?(request.host)
+      redirect request.url.sub(request.host, 'idcon.org')
+    end
   end
 
   get(/.+/) do
