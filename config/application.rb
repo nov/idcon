@@ -36,7 +36,7 @@ class Application < Sinatra::Base
   end
 
   def static_file_for(path)
-    original_path = File.join(File.dirname(__FILE__), 'public',  path)
+    original_path = File.join(File.dirname(__FILE__), '../public',  path)
     file_path_candidates = [original_path]
     file_path_candidates << "#{original_path}.html" unless original_path =~ /\.html$/
     file_path_candidates.detect do |file_path|
