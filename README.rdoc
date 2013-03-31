@@ -1,0 +1,45 @@
+= Idcon.org Website
+
+An Octopress site running on Heroku.
+
+Since we aren't blogging, not using Octopress blogging feature for now.
+
+== Install
+
+  git clone git@github.com:nov/octopress-idcon.git
+  cd octopress-idcon
+  rbenv install # optional, you just need ruby 1.9.3
+  gem install bundler # skip if you already have it
+  bundle
+
+== Run on local
+
+Assuming you already have pow http://pow.cx/
+
+  cd ~/.pow
+  ln -s /somewhere/you/installed/octopress-idcon idcon
+  open http://idcon.dev
+
+== Update Events
+
+You just run the default rake task, which fetches recent events from idcon.doorkeeper.jp and update index.html
+
+  rake
+
+== Pulish
+
+If you have idcon.org heroku repository access,
+
+  git push heroku
+
+otherwise, send a pull request.
+
+== Tips
+
+When you are modifying SASS or HTML and don't want to type "rake" each time you want to preview, just run
+
+  rake watch
+
+then all changes you made are affected in realtime.
+
+You just reload your browser.
