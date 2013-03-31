@@ -38,15 +38,12 @@ class Application < Sinatra::Base
   def static_file_for(path)
     original_path = absolute path
     file_path_candidates = [original_path]
-    file_path_candidates << "#{original_path}.html" unless original_path =~ /\.html$/
+    unless original_path =~ /\.html$/
+      file_path_candidates << File.join(file_path, 'index.html')
+      file_path_candidates << "#{original_path}.html"
+    end
     file_path_candidates.detect do |file_path|
-      if File.exist?(file_path)
-        if File.directory?(file_path)
-          File.join(file_path, 'index.html')
-        else
-          file_path
-        end
-      end
+      File.exist?(file_path) && !File.directory?(file_path)
     end
   end
 
