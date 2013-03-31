@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }} - {{ site.subtitle }}</title>
+	<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
     <meta name="author" content="{{ site.author }}">
     {% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ content | raw_content }}{% endif %}{% endcapture %}
 	<meta name="description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
@@ -22,9 +22,9 @@
 
     <script type="text/javascript" src="{{ root_url }}/javascripts/jquery-tapir.js"></script>
 
-    <!-- remove or comment it to disable ajaxification -->
+    <!-- remove or comment it to disable ajaxification -->   
     <script src="/javascripts/ajaxify.js"></script>
-
+   
     {% include custom/head.html %}
     {% include google_analytics.html %}
 </head>

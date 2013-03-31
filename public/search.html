@@ -3,10 +3,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>#idcon - Identity Conference</title>
+	<title>#idcon</title>
     <meta name="author" content="idcon.org">
     
-	<meta name="description" content="Search Results $('#search_results').tapir({ 'token': '', 'complete' : function() { document.getElementById('search_loading').style.display="none &hellip;">
+	<meta name="description" content="Search Results $('#search_results').tapir({ 'token': '5157d4e53f61b05ba9000287', 'complete' : function() { document.getElementById('search_loading'). &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -23,9 +23,9 @@
 
     <script type="text/javascript" src="/javascripts/jquery-tapir.js"></script>
 
-    <!-- remove or comment it to disable ajaxification -->
+    <!-- remove or comment it to disable ajaxification -->   
     <script src="/javascripts/ajaxify.js"></script>
-
+   
     
     
 
@@ -37,14 +37,29 @@
     <header id="header" class="inner"><!-- for more effects see _animate.scss -->
 <h1 class="animated bounceInDown">
     <div id="headerbg">
-        #idcon
+        <a href="/">#idcon</a>
     </div>
 </h1>
 <br>
 
 <ul id="social-links" style="text-align:center">
   
+  <!-- Facebook -->
+  <li>
+  <a href="http://www.facebook.com/idcon.org" class="facebook" title="Facebook"></a>
+  </li>
   
+  
+  <!-- Twitter -->
+  <li>
+  <a href="http://www.twitter.com/search?q=%23idcon&src=typd" class="twitter" title="Twitter"></a>
+  </li>
+  
+  
+  <!-- GitHub -->
+  <li>
+  <a href="https://github.com/nov/octopress-idcon" class="github" title="Github"></a>
+  </li>
   
   
   
@@ -56,18 +71,18 @@
 
 <!-- use full url including 'index.html' for navigation bar if you are using ajax -->
 <ul id="nav">
-	<li id="ajax"><a href="/index.html">Home</a></li>
-	<li id="ajax"><a href="/blog/archives/index.html">Archives</a></li>
-    <li><a href="/atom.xml">RSS</a></li>
-    
-    <li>
-    <div id="dark">
-        <form method="get" action="/search.html" id="search">
-            <input name="query" type="text" placeholder="Search..." x-webkit-speech />
-        </form>
-    </div>
-    </li>
-        
+  <li><a href="/">Home</a></li>
+  <li><a href="/blog/archives/">Archives</a></li>
+  <li><a href="/atom.xml">RSS</a></li>
+  
+  <li>
+  <div id="dark">
+      <form method="get" action="/search" id="search">
+          <input name="query" type="text" placeholder="Search..." x-webkit-speech />
+      </form>
+  </div>
+  </li>
+  
 </ul>
 
 
@@ -89,7 +104,7 @@
 </div>
 <script>
          $('#search_results').tapir({
-             'token': '',
+             'token': '5157d4e53f61b05ba9000287',
              'complete' : function() { document.getElementById('search_loading').style.display="none"; }
          });
 </script>

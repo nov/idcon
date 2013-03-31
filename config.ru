@@ -15,9 +15,15 @@ class SinatraStaticServer < Sinatra::Base
   end
 
   def send_sinatra_file(path, &missing_file_block)
-    file_path = File.join(File.dirname(__FILE__), 'public',  path)
-    file_path = File.join(file_path, 'index.html') unless file_path =~ /\.[a-z]+$/i
-    File.exist?(file_path) ? send_file(file_path) : missing_file_block.call
+    original_path = File.join(File.dirname(__FILE__), 'public',  path)
+    file_path_candidates = []
+    file_path_candidates << original_path
+    file_path_candidates << File.join(original_path, 'index.html')
+    file_path_candidates << "#{original_path}.html"
+    found_file_path = file_path_candidates.detect do |file_path|
+      File.exist?(file_path)
+    end || missing_file_block.call
+    send_file(found_file_path)
   end
 
 end

@@ -63,13 +63,13 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.
 # ----------------------- #
 
 # Github repositories
-github_user:
+github_user: nov/octopress-idcon
 github_repo_count: 0
 github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user:
+twitter_user: "search?q=%23idcon&src=typd"
 twitter_tweet_button: true
 
 # Google +1
@@ -96,5 +96,9 @@ disqus_show_comment_count: false
 # Google Analytics
 google_analytics_tracking_id:
 
-# Facebook Like
+# Facebook
+facebook_user: idcon.org
 facebook_like: false
+
+# Tapir
+tapir_token: 5157d4e53f61b05ba9000287
