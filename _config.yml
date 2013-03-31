@@ -2,10 +2,10 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+url: http://idcon.herokuapp.com
+title: "#idcon - Identity Conference"
+subtitle: ID厨と、人は呼ぶ。
+author: Nov Matake
 simple_search: http://google.com/search
 description:
 
