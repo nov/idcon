@@ -391,4 +391,14 @@ task :list do
   puts "(type rake -T for more detail)\n\n"
 end
 
-task :default => :generate
+desc "import events"
+task :import_events do
+  puts "## Importing Recent Events from Doorkeeper"
+  current_dir = File.dirname(__FILE__)
+  require File.join(current_dir, 'script/import_events.rb')
+  File.open File.join(current_dir, 'source/_includes/events.html'), 'w' do |file|
+    file << Event.all.to_html
+  end
+end
+
+task :default => [:import_events, :generate]

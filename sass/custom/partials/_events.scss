@@ -1,0 +1,19 @@
+.events {
+  ul {
+    list-style: none;
+    li {
+      margin: 15px 0;
+      h3 {
+        margin-top: -10px;
+      }
+      a {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      .date {
+        @extend .title;
+      }
+    }
+  }
+}
