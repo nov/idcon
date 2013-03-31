@@ -26,7 +26,7 @@ class Application < Sinatra::Base
 
   def respond_with_static_file(path)
     if file_path = static_file_for(path)
-      expires 600, :private
+      expires 600, :public
       send_file file_path
     else
       404
