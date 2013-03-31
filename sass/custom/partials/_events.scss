@@ -1,4 +1,9 @@
 .events {
+  @media screen and (max-width: 800px) {
+    ul {
+      margin-left: 0;
+    }
+  }
   ul {
     list-style: none;
     li {
