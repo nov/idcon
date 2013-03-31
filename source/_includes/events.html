@@ -1,7 +1,7 @@
       <h2>Recent Events</h2>
       <div class="entry-content">
         <ul>
-                <li>
+                <li class="event" data-date="2013-05-24">
         <div class="meta">
           <a href="http://idcon.doorkeeper.jp/events/3448">
             <span class="date"><time>2013-05-24</time></span>
@@ -10,7 +10,7 @@
         </div>
         <h3 class="title"><a href="http://idcon.doorkeeper.jp/events/3448">#idcon 16th ~ Beyond IIW ~</a></h3>
       </li>
-      <li>
+      <li class="event" data-date="2013-02-01">
         <div class="meta">
           <a href="http://idcon.doorkeeper.jp/events/2448">
             <span class="date"><time>2013-02-01</time></span>
@@ -19,7 +19,7 @@
         </div>
         <h3 class="title"><a href="http://idcon.doorkeeper.jp/events/2448">#idcon 15th ~ YConnect & Future of Authentication ~</a></h3>
       </li>
-      <li>
+      <li class="event" data-date="2012-10-05">
         <div class="meta">
           <a href="http://idcon.doorkeeper.jp/events/1689">
             <span class="date"><time>2012-10-05</time></span>
@@ -31,3 +31,17 @@
 
         </ul>
       </div>
+
+      <script>
+        $(function () {
+          $('.event').each(function (index, event) {
+            var today = new Date();
+            var date = new Date($(event).data('date'));
+            if (today <= date) {
+              $(event).addClass('future');
+            } else {
+              $(event).addClass('past');
+            }
+          });
+        })
+      </script>

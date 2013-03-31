@@ -11,6 +11,20 @@ class Array
           #{collect(&:to_html).join}
         </ul>
       </div>
+
+      <script>
+        $(function () {
+          $('.event').each(function (index, event) {
+            var today = new Date();
+            var date = new Date($(event).data('date'));
+            if (today <= date) {
+              $(event).addClass('future');
+            } else {
+              $(event).addClass('past');
+            }
+          });
+        })
+      </script>
     HTML
   end
 end
@@ -38,7 +52,7 @@ class Event
 
   def to_html
     <<-HTML
-      <li>
+      <li class="event" data-date="#{hold_on}">
         <div class="meta">
           <a href="#{public_url}">
             <span class="date"><time>#{hold_on}</time></span>
