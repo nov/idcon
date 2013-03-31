@@ -4,6 +4,8 @@ An Octopress site running on Heroku.
 
 Since we aren't blogging, not using Octopress blogging feature for now.
 
+Actual site is running at http://idcon.org
+
 == Install
 
   git clone git@github.com:nov/octopress-idcon.git
@@ -14,7 +16,7 @@ Since we aren't blogging, not using Octopress blogging feature for now.
 
 == Run on local
 
-Assuming you already have pow http://pow.cx/
+Assuming you already have pow http://pow.cx
 
   cd ~/.pow
   ln -s /somewhere/you/installed/octopress-idcon idcon
