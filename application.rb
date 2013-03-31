@@ -7,6 +7,7 @@ $root = ::File.dirname(__FILE__)
 class Application < Sinatra::Base
   before    { unify_hostname }
   not_found { send_file absolute('404.html'), status: 404 }
+  configure { set static_cache_control: [:public, max_age: 600] }
 
   get(/.+/) do
     respond_with_static_file request.path
