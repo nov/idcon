@@ -1,6 +1,7 @@
 .events {
   @media screen and (max-width: 800px) {
-    ul {
+    ul,
+    .entry-content ul {
       margin-left: 0;
     }
   }
