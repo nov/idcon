@@ -6,7 +6,7 @@ $root = ::File.dirname(__FILE__)
 
 class Application < Sinatra::Base
   before    { unify_hostname }
-  not_found { send_file 'public/404.html', status: 404 }
+  not_found { send_file absolute('404.html'), status: 404 }
 
   get(/.+/) do
     respond_with_static_file request.path do
@@ -36,7 +36,7 @@ class Application < Sinatra::Base
   end
 
   def static_file_for(path)
-    original_path = File.join(File.dirname(__FILE__), '../public',  path)
+    original_path = absolute path
     file_path_candidates = [original_path]
     file_path_candidates << "#{original_path}.html" unless original_path =~ /\.html$/
     file_path_candidates.detect do |file_path|
@@ -48,5 +48,9 @@ class Application < Sinatra::Base
         end
       end
     end
+  end
+
+  def absolute(path)
+    File.join File.dirname(__FILE__), '../public',  path
   end
 end
