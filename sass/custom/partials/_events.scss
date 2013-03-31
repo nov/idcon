@@ -34,17 +34,16 @@
       }
     }
   }
-}
-
-@media screen and (max-width: 800px) {
-  ul,
-  .entry-content ul {
-    margin-left: 0;
+  @media screen and (max-width: 800px) {
+    ul,
+    .entry-content ul {
+      margin-left: 0;
+    }
   }
-
-}
-@media screen and (max-width: 600px) {
-  .post .meta .date {
-    padding-left: 20px;
+  @media screen and (max-width: 600px) {
+    &.post .meta .date {
+      padding-left: 20px;
+    }
   }
 }
+
