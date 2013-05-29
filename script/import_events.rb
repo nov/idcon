@@ -41,12 +41,12 @@ class Event
     end
   end
 
-  attr_accessor :title, :hold_on, :starts_at, :venue, :public_url
+  attr_accessor :title, :hold_on, :starts_at, :venue_name, :public_url
 
   def initialize(attributes = {})
     self.title = attributes[:title]
     self.starts_at = Time.parse attributes[:starts_at]
-    self.venue = attributes[:venue]
+    self.venue_name = attributes[:venue_name]
     self.public_url = attributes[:public_url]
     self.hold_on = self.starts_at.to_date
   end
@@ -57,7 +57,7 @@ class Event
         <div class="meta">
           <a href="#{public_url}">
             <span class="date"><time>#{hold_on}</time></span>
-            <span class="location">#{venue}</span>
+            <span class="location">#{venue_name}</span>
           </a>
         </div>
         <h3 class="title"><a href="#{public_url}">#{title}</a></h3>
