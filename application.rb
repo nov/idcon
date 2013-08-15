@@ -18,7 +18,9 @@ class Application < Sinatra::Base
   def unify_hostname
     alternate_domains = [
       'www.idcon.org',
-      'idcon.herokuapp.com'
+      'idcon.herokuapp.com',
+      'idcon.jp',
+      'www.idcon.jp'
     ]
     if alternate_domains.include?(request.host)
       redirect request.url.sub(request.host, 'idcon.org')
