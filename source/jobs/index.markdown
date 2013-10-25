@@ -8,3 +8,4 @@ footer: true
 ---
 
 掲載希望の方は、[#idcon github repository](https://github.com/nov/octopress-idcon) に issue なり pull request なりを送っていただければ対応します。
+このページのソースは[こちら](https://github.com/nov/octopress-idcon/tree/master/source/jobs)。
