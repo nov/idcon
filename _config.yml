@@ -73,7 +73,7 @@ twitter_user: "search?q=%23idcon"
 twitter_tweet_button: true
 
 # Google +1
-google_plus_one: false
+google_plus_one: true
 google_plus_one_size: medium
 
 # Google Plus Profile
@@ -98,7 +98,7 @@ google_analytics_tracking_id:
 
 # Facebook
 facebook_user: idcon.org
-facebook_like: false
+facebook_like: true
 
 # Tapir
 tapir_token: 5157d4e53f61b05ba9000287
