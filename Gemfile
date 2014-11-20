@@ -14,12 +14,11 @@ group :development do
   gem 'rb-fsevent', '~> 0.9'
   gem 'stringex', '~> 1.4.0'
   gem 'liquid', '~> 2.3.0'
-  gem 'rest-client'
   gem 'json'
   gem 'activesupport'
+  gem 'rest-client'
+  gem 'posix-spawn', '0.3.8' # ref.) https://github.com/rtomayko/posix-spawn/issues/50
 end
 
 gem 'sinatra', '~> 1.4.2'
 gem 'unicorn'
-gem 'rest-client'
-gem 'rest-client'
