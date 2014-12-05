@@ -34,7 +34,7 @@ class Event
   class << self
     def all
       JSON.parse(
-        RestClient.get('http://api.doorkeeper.jp/groups/idcon/events')
+        RestClient.get('http://api.doorkeeper.jp/groups/idcon/events?since=1970-01-01')
       ).collect do |event|
         new event.with_indifferent_access[:event]
       end
