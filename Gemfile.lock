@@ -99,3 +99,6 @@ DEPENDENCIES
   sinatra (~> 1.4.2)
   stringex (~> 1.4.0)
   unicorn
+
+BUNDLED WITH
+   1.10.3
