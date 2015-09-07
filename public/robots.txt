@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://idcon.herokuapp.com/sitemap.xml 
+Sitemap: http://idcon.github.io/sitemap.xml 

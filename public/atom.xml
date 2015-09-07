@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[#idcon]]></title>
-  <link href="http://idcon.herokuapp.com/atom.xml" rel="self"/>
-  <link href="http://idcon.herokuapp.com/"/>
-  <updated>2015-07-10T15:16:46+09:00</updated>
-  <id>http://idcon.herokuapp.com/</id>
+  <link href="http://idcon.github.io/atom.xml" rel="self"/>
+  <link href="http://idcon.github.io/"/>
+  <updated>2015-09-07T22:07:34+09:00</updated>
+  <id>http://idcon.github.io/</id>
   <author>
     <name><![CDATA[idcon.org]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Hello World!]]></title>
-    <link href="http://idcon.herokuapp.com/blog/2013/03/31/hello-world/"/>
+    <link href="http://idcon.github.io/blog/2013/03/31/hello-world/"/>
     <updated>2013-03-31T15:25:00+09:00</updated>
-    <id>http://idcon.herokuapp.com/blog/2013/03/31/hello-world</id>
+    <id>http://idcon.github.io/blog/2013/03/31/hello-world</id>
     <content type="html"><![CDATA[<p>testing</p>
 ]]></content>
   </entry>
