@@ -102,3 +102,6 @@ facebook_like: true
 
 # Tapir
 tapir_token: 5157d4e53f61b05ba9000287
+
+# dotfiles
+include: [".well-known"]
