@@ -37,7 +37,7 @@ class Event
         RestClient.get('http://api.doorkeeper.jp/groups/idcon/events?since=1970-01-01')
       ).collect do |event|
         new event.with_indifferent_access[:event]
-      end
+      end.sort_by(&:starts_at).reverse
     end
   end
 
