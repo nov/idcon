@@ -72,6 +72,9 @@ github_skip_forks: true
 twitter_user: "search?q=%23idcon"
 twitter_tweet_button: true
 
+# YouTube
+youtube_channel: 'channel/UCO4UxfD_-1hUh6b_Wo2J9HQ'
+
 # Google +1
 google_plus_one: true
 google_plus_one_size: medium
