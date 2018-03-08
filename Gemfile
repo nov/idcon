@@ -20,5 +20,5 @@ group :development do
   gem 'posix-spawn', '0.3.8' # ref.) https://github.com/rtomayko/posix-spawn/issues/50
 end
 
-gem 'sinatra', '~> 1.4.2'
+gem 'sinatra'
 gem 'unicorn'
