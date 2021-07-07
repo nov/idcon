@@ -34,7 +34,7 @@ class Event
   class << self
     def all
       JSON.parse(
-        RestClient.get('http://api.doorkeeper.jp/groups/idcon/events?since=1970-01-01')
+        RestClient.get('https://api.doorkeeper.jp/groups/idcon/events?since=1970-01-01', :authorization => "Bearer #{ENV["DOORKEEPER_TOKEN"]}")
       ).collect do |event|
         new event.with_indifferent_access[:event]
       end.sort_by(&:starts_at).reverse

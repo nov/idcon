@@ -24,9 +24,10 @@ Assuming you already have pow http://pow.cx
 
 == Update Events
 
-You just run the default rake task, which fetches recent events from idcon.doorkeeper.jp and update index.html
+To update the events, you'll need a access token from Doorkeeper, which you can create at https://manage.doorkeeper.jp/user/oauth/applications/new.
+Then just run the default rake task specifying the token, which fetches recent events from idcon.doorkeeper.jp and update index.html
 
-  rake
+  DOORKEEPER_TOKEN=token rake
 
 == Pulish
 
